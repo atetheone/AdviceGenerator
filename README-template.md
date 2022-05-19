@@ -25,8 +25,8 @@ An advice generator that generate advice randomly every time the page is refresh
 
 ### Links
 
-- Solution URL: [https://github.com/atetheone/AdviceGenerator](https://your-solution-url.com)
-- Live Site URL: [https://ate-advice-gen.herokuapp.com](https://your-live-site-url.com)
+- Solution URL: [https://github.com/atetheone/AdviceGenerator]
+- Live Site URL: [https://ate-advice-gen.herokuapp.com]
 
 ## My process
 - Generate Angular app
