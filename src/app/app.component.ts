@@ -1,11 +1,14 @@
+import { HttpClient } from '@angular/common/http';
+import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'AdviceGenerator';
   adviceApiUrl = "https://api.adviceslip.com/advice";
   slip!: { id: number, advice: string};
@@ -13,12 +16,15 @@ export class AppComponent implements OnInit {
 
   constructor(
     private http: HttpClient
-  )
-  async ngOnInit() {
+  ) {
     this.http.get<any>(this.adviceApiUrl)
       .subscribe(
-        advice => this.slip = advice.slip,
+        advice => {
+          console.log(JSON.stringify(advice, null, 3))
+          this.slip = advice.slip;
+        },
         error => console.log(`Error: ${error}`)
       )
   }
+
 }

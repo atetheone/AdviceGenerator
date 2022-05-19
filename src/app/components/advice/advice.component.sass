@@ -1,0 +1,44 @@
+@import "../../../_variables"
+
+.advice
+  text-align: center
+  border-radius: 7px
+  padding: 10px
+  background-color: $grayish-blue
+  width: 375px
+  color: #fafafa
+
+  .title
+    color: $neon-green
+    text-transform: uppercase
+
+  .divider
+    margin-top: 15px
+    background-color: rgba($color: $dark-blue, $alpha: .1)
+    text-align: center
+    img
+      z-index: 2
+      max-width: 100%
+
+  .advice-content
+    font-size: $quote-size
+    font-weight: $weights
+
+  .dice
+    position: relative
+    top: 40px
+    border-radius: 50px
+    border: none
+    padding: 15px
+    background-color: $neon-green
+
+
+@media screen and (max-width: $mobile-screen)
+    .advice
+        padding: 5px
+        margin: 5px
+        width: 100%
+    
+
+    
+  
