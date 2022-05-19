@@ -1,14 +1,24 @@
 <div class="advice">
     <div class="title"> Advice # {{ slip?.id }}</div>
-    <p class="advice-content">
-      {{ slip?.advice }}
-    </p>
+    <div class="advice-content">
+      <div 
+        class="spinner-border text-primary" 
+        id="loading" 
+        role="status" 
+        [ngClass]="{'hideLoader': hiddenLoader === true  }"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div>
+        {{ slip?.advice }}
+      </div> 
+    </div>
 
     <div class="divider">
       <img src="../assets/images/pattern-divider-desktop.svg" alt="" srcset="">
     </div>
 
-    <button class="dice">
+    <button (click)="generateAdvice()" class="dice">
       <img src="../assets/images/icon-dice.svg" alt="" srcset="">
     </button>
 </div>
